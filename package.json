@@ -1,6 +1,6 @@
 {
   "name": "cli-argument-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A package containing relevant CLI actions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
