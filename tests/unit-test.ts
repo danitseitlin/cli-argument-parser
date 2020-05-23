@@ -1,4 +1,4 @@
 import { cliArguments } from '../index';
-test('the data is peanut butter', async () => {
+test('Checking for expected arguments list', async () => {
     expect(cliArguments).toEqual({x: '10'});
 });
