@@ -1,9 +1,9 @@
-# cli
+# CLI argument parser
 Working with CLI arguments the way you like it
 
 ### Basic usage
 ```
-import { cliArguments } from 'cli';
+import { cliArguments } from 'cli-argument-parser';
 const arg1 = cliArguments.arg1;
 const arg2 = cliArguments.arg2;
 ```
