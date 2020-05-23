@@ -1,0 +1,43 @@
+{
+  "name": "cli",
+  "version": "0.0.1",
+  "description": "A package containing relevant CLI actions",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danitseitlin/cli.git"
+  },
+  "author": "Dani Tseitlin",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/danitseitlin/cli/issues"
+  },
+  "homepage": "https://github.com/danitseitlin/cli#readme",
+  "dependencies": {
+    "file-exists": "5.0.1"
+  },
+  "devDependencies": {
+    "@types/file-exists": "4.0.0",
+    "@types/jest": "25.2.3",
+    "@types/node": "14.0.5",
+    "jest": "26.0.1",
+    "node": "14.2.0",
+    "ts-jest": "^26.0.0",
+    "typescript": "3.9.3"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  }
+}
