@@ -23,3 +23,5 @@ and paste the following into it:
 The `prefix` is a value which the argument must start with, `--` is the default one. (ex: `--arg=5`) <br>
 The `equalitySign` is a value which the argument must start with, `=` is the default one. (ex: `--arg=5`) <br>
 This gives you the abillity to configurate your cli arguments as you wish.
+
+![CI](https://github.com/danitseitlin/cli-argument-parser/workflows/CI/badge.svg)
