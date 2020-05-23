@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A package containing relevant CLI actions",
   "main": "index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"
