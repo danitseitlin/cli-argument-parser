@@ -23,4 +23,4 @@ jobs:
     - name: Setting up the npm packages
       run: npm install
     - name: Running unit tests
-      run: npm run test
+      run: npm run test -- --x=10
