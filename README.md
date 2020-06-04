@@ -1,4 +1,4 @@
-![CI](https://github.com/danitseitlin/cli-argument-parser/workflows/CI/badge.svg)
+# Command-line Argument Parser &middot; [![GitHub license](https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg)](https://github.com/danitseitlin/cli-argument-parser/blob/master/LICENSE) [![npm version](http://img.shields.io/npm/v/cli-argument-parser.svg?style=flat)](https://npmjs.org/package/cli-argument-parser "View this project on npm") ![CI](https://github.com/danitseitlin/cli-argument-parser/workflows/CI/badge.svg)
 ## About
 This NodeJS module is built for easier working with command line arguments.
 You can get to the module [here](https://www.npmjs.com/package/cli-argument-parser)
