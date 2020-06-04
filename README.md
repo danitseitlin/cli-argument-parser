@@ -1,6 +1,15 @@
-# CLI argument parser
-Working with CLI arguments the way you like it
+![CI](https://github.com/danitseitlin/cli-argument-parser/workflows/CI/badge.svg)
+## About
+This NodeJS module is built for easier working with command line arguments.
+You can get to the module [here](https://www.npmjs.com/package/cli-argument-parser)
+## Quick Start
 
+### Install the module
+Run the following command in your terminal:
+
+`npm i cli-argument-parser`
+
+## How to use
 ### Basic usage
 ```
 import { cliArguments } from 'cli-argument-parser';
@@ -11,7 +20,7 @@ Run a cli with `arg1` and `arg2`
 like: `my-command --arg1=2 --arg2=1`
 And the values will be inside the variables we declared above.
 
-### CLI configuration
+### Configuration file usage
 Create a file in the root of your project called `cli.config.json`
 and paste the following into it:
 ```
@@ -23,5 +32,3 @@ and paste the following into it:
 The `prefix` is a value which the argument must start with, `--` is the default one. (ex: `--arg=5`) <br>
 The `equalitySign` is a value which the argument must start with, `=` is the default one. (ex: `--arg=5`) <br>
 This gives you the abillity to configurate your cli arguments as you wish.
-
-![CI](https://github.com/danitseitlin/cli-argument-parser/workflows/CI/badge.svg)
