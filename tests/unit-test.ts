@@ -1,4 +1,11 @@
 import { cliArguments } from '../index';
-test('Checking for expected arguments list', async () => {
-    expect(cliArguments).toEqual({x: '10'});
+import { expect } from 'chai'
+describe('Sanity testing', async function() {
+    it('Positive: Expected arguments', async () => {
+        expect(cliArguments.x).to.equal('10', 'The value of x');
+    });
+    it('Negative: Expected arguments', async () => {
+        expect(cliArguments.y).to.equal(undefined, 'The existence of y')
+    });
 });
+
