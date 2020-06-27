@@ -1,13 +1,15 @@
 {
   "name": "cli-argument-parser",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A package containing relevant CLI actions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "pre-deploy": "npm run test -- --x=10 && npm run build",
+    "test": "mocha -r ts-node/register",
+    "unit-tests": "npm run test tests/unit-test.ts -- --x=10",
+    "configuration-unit-tests": "npm run test tests/unit-test.ts -- ---x=10 --cli-prefix=---",
+    "pre-deploy": "npm run unit-tests && npm run configuration-unit-tests && npm run build",
     "deploy": "npm version patch && npm publish"
   },
   "repository": {
@@ -21,26 +23,17 @@
   },
   "homepage": "https://github.com/danitseitlin/cli-argument-parser#readme",
   "dependencies": {
-    "file-exists": "5.0.1",
-    "node": "14.2.0"
+    "file-exists": "5.0.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "mocha": "^8.0.1",
+    "chai": "^4.2.0",
     "@types/file-exists": "4.0.0",
-    "@types/jest": "25.2.3",
     "@types/node": "14.0.5",
-    "jest": "26.0.1",
     "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.2",
     "typescript": "3.9.3"
-  },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
   }
 }
