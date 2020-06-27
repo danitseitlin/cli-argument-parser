@@ -20,15 +20,15 @@ function loadArguments(): {[key: string]: string} {
  * @param seperator The seperator of the argument
  */
 function filterArguments(prefix: string, seperator: string): {[key: string]: string} {
-    const json = {};
+    const finalArgumentsList = {};
     const argumentsList = process.argv.filter((argument: string) => argument.startsWith(prefix) && argument.indexOf(seperator) !== -1)
     for(const argument of argumentsList) {
-        const splitArgument: string[] = argument.split(seperator);
+        const splitArgument = argument.split(seperator);
         const name = splitArgument[0].replace(prefix, '')
         const value = splitArgument[1]
-        json[name] = value;
+        finalArgumentsList[name] = value;
     }
-    return json;
+    return finalArgumentsList;
 }
 
 /**

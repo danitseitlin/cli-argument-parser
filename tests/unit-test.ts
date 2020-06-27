@@ -5,7 +5,7 @@ describe('Sanity testing', async function() {
         expect(cliArguments.x).to.equal('10', 'The value of x');
     });
     it('Negative: Expected arguments', async () => {
-        expect(cliArguments.y).to.equal(undefined, 'The existence of y')
+        expect(cliArguments.y).to.equal(undefined, 'The value of y')
     });
 });
 
