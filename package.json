@@ -7,8 +7,9 @@
   "scripts": {
     "build": "tsc",
     "test": "mocha -r ts-node/register",
-    "unit-tests": "npm run test tests/unit-test.ts -t 'Sanity testing'",
-    "pre-deploy": "npm run test -- --x=10 && npm run build",
+    "unit-tests": "npm run test tests/unit-test.ts -- --x=10",
+    "configuration-unit-tests": "npm run test tests/unit-test.ts -- ---x=10 --cli-prefix=---",
+    "pre-deploy": "npm run unit-tests && npm run configuration-unit-tests && npm run build",
     "deploy": "npm version patch && npm publish"
   },
   "repository": {
