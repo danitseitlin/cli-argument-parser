@@ -21,14 +21,27 @@ function loadArguments(): {[key: string]: string} {
  */
 export function filterArguments(prefix: string, seperator: string): {[key: string]: string} {
     const finalArgumentsList = {};
-    const argumentsList = process.argv.filter((argument: string) => argument.startsWith(prefix) && argument.indexOf(seperator) !== -1)
+    const argumentsList = filterer(prefix, seperator);
     for(const argument of argumentsList) {
-        const splitArgument = argument.split(seperator);
+        const splitArgument = (seperator !== '') ? argument.split(seperator): [argument, undefined];
         const name = splitArgument[0].replace(prefix, '')
-        const value = splitArgument[1]
+        const value = (splitArgument[1] !== undefined) ? splitArgument[1]: ''
         finalArgumentsList[name] = value;
     }
     return finalArgumentsList;
+}
+
+/**
+ * A filter function to filter by dynamic prefix & seperator
+ * @param prefix The prefix of the argument
+ * @param seperator The seperator of the argument 
+ */
+function filterer(prefix: string, seperator: string): string[] {
+    if(prefix !== '' && seperator === '')  
+        return process.argv.filter((argument: string) => argument.startsWith(prefix))
+    else if(prefix === '' && seperator !== '')
+        return process.argv.filter((argument: string) => argument.indexOf(seperator) !== -1)
+    return process.argv;
 }
 
 /**
