@@ -19,7 +19,7 @@ function loadArguments(): {[key: string]: string} {
  * @param prefix The prefix of the argument
  * @param seperator The seperator of the argument
  */
-function filterArguments(prefix: string, seperator: string): {[key: string]: string} {
+export function filterArguments(prefix: string, seperator: string): {[key: string]: string} {
     const finalArgumentsList = {};
     const argumentsList = process.argv.filter((argument: string) => argument.startsWith(prefix) && argument.indexOf(seperator) !== -1)
     for(const argument of argumentsList) {
