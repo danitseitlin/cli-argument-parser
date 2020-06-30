@@ -10,7 +10,7 @@
     "unit-tests": "npm run test tests/unit-test.ts -- --x=10",
     "configuration-unit-tests": "npm run test tests/unit-test.ts -- ---x=10 --cli-prefix=---",
     "pre-deploy": "npm run unit-tests && npm run configuration-unit-tests && npm run build",
-    "deploy": "npm version patch && npm publish"
+    "deploy": "npm-deploy cli-argument-parser"
   },
   "repository": {
     "type": "git",
