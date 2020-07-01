@@ -23,9 +23,17 @@ jobs:
       run: git config --global user.name ${{secrets.BOT_NAME}} && git config --global user.email ${{secrets.BOT_EMAIL}}
     - name: Creating .npmrc file
       run: echo "registry=https://registry.npmjs.org/" >> ~/.npmrc && echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_AUTH_TOKEN}}" >> ~/.npmrc
+<<<<<<< HEAD
     - name: Installing NPM packages
+=======
+    - name: Setting up the environment
+>>>>>>> 2f1d7df19230930af925e91a74bcb82bfc7e8559
       run: npm install
     - name: Running verifications
       run: npm run pre-deploy
     - name: Deploying version
+<<<<<<< HEAD
       run: npm run deploy
+=======
+      run: npm run deploy
+>>>>>>> 2f1d7df19230930af925e91a74bcb82bfc7e8559
