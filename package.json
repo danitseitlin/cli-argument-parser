@@ -10,11 +10,7 @@
     "unit-tests": "npm run test tests/unit-test.ts -- --x=10",
     "configuration-unit-tests": "npm run test tests/unit-test.ts -- ---x=10 --cli-prefix=---",
     "pre-deploy": "npm run unit-tests && npm run configuration-unit-tests && npm run build",
-<<<<<<< HEAD
-    "deploy": "deploy cli-argument-parser"
-=======
     "deploy": "npm-deploy cli-argument-parser"
->>>>>>> 2f1d7df19230930af925e91a74bcb82bfc7e8559
   },
   "repository": {
     "type": "git",
@@ -37,10 +33,6 @@
     "chai": "^4.2.0",
     "mocha": "^8.0.1",
     "npm-package-deployer": "0.0.6",
-<<<<<<< HEAD
-=======
-    "ts-jest": "^26.0.0",
->>>>>>> 2f1d7df19230930af925e91a74bcb82bfc7e8559
     "ts-node": "^8.10.2",
     "typescript": "3.9.3"
   }
