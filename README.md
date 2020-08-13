@@ -25,9 +25,9 @@ and paste the following into it:
 ```
 {
     prefix: '--',
-    equalitySign: '='
+    seperator: '='
 }
 ```
 The `prefix` is a value which the argument must start with, `--` is the default one. (ex: `--arg=5`) <br>
-The `equalitySign` is a value which the argument must start with, `=` is the default one. (ex: `--arg=5`) <br>
+The `seperator` is a value which seperated between the argument name and argument value. `=` is the default one. (ex: `--arg=5`) <br>
 This gives you the abillity to configurate your cli arguments as you wish.
