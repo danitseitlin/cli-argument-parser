@@ -25,8 +25,7 @@ import { cliArguments } from 'cli-argument-parser';
 const arg1 = cliArguments.arg1;
 const arg2 = cliArguments.arg2;
 ```
-Run a cli with `arg1` and `arg2`
-like: `my-command --arg1=2 --arg2=1`
+Run a cli with `arg1` and `arg2`, ie: `my-command --arg1=2 --arg2=1`
 And the values will be inside the variables we declared above.
 
 ## :speak_no_evil: Easily configurate unique CLI's
