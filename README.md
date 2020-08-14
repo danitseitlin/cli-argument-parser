@@ -1,4 +1,4 @@
-<p align='center'><a href='https://github.com/danitseitlin/npm-package-deployer'><img src='.github/resources/logo.png' /></a></p>
+<p align='center'><a href='https://github.com/danitseitlin/cli-argument-parser'><img src='.github/resources/logo.png' /></a></p>
 
 <p align='center'>
   <a href='https://github.com/danitseitlin/cli-argument-parser/blob/master/LICENSE'>
@@ -15,6 +15,7 @@
   </a>
 </p>
 
+<p align='center'><a href='https://github.com/danitseitlin/cli-argument-parser'><img src='.github/resources/gif.gif' /></a></p>
 
 ## :metal: Quick Start
 Run `npm i cli-argument-parser`
