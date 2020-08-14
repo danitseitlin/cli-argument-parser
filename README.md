@@ -1,6 +1,22 @@
-# Command-line Argument Parser &middot; [![GitHub license](https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg)](https://github.com/danitseitlin/cli-argument-parser/blob/master/LICENSE) [![npm version](http://img.shields.io/npm/v/cli-argument-parser.svg?style=flat)](https://npmjs.org/package/cli-argument-parser "View this project on npm") ![CI](https://github.com/danitseitlin/cli-argument-parser/workflows/CI/badge.svg)
-## About
-This NodeJS module is built for easier working with command line arguments.
+<IMAGE HERE>
+<h1 align='center'>CLI Argument parser<g-emoji class='g-emoji' alias='point_right' fallback-src='https://github.githubassets.com/images/icons/emoji/unicode/1f449.png'>👉</g-emoji> Automate your deployment process!</h1>
+<p align='center'>
+  <a href='https://github.com/danitseitlin/cli-argument-parser/blob/master/LICENSE'>
+    <img src='https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg' target='_blank' />
+  </a>
+  <a href='https://npmjs.org/package/cli-argument-parser'>
+    <img src='http://img.shields.io/npm/v/cli-argument-parser.svg?style=flat' target='_blank' />
+  </a>
+  <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
+    <img src='https://img.shields.io/npm/dm/cli-argument-parser.svg?color=blue' target='_blank' />
+  </a>
+  <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
+    <img src='https://img.shields.io/bitbucket/issues/danitseitlin/cli-argument-parser' target='_blank' />
+  </a>
+  <a href='https://dev.to/danitseitlin/simple-deploybot-npm-package-494f'>
+    <img src='https://cdn4.iconfinder.com/data/icons/logos-and-brands-1/512/84_Dev_logo_logos-512.png' width='25' height='20' target='_blank' />
+  </a>
+</p>
 ## Quick Start
 
 ### Install the module
