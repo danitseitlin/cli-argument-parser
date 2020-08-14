@@ -41,6 +41,8 @@ function filterer(prefix: string, seperator: string): string[] {
         return process.argv.filter((argument: string) => argument.startsWith(prefix))
     else if(prefix === '' && seperator !== '')
         return process.argv.filter((argument: string) => argument.indexOf(seperator) !== -1)
+    else if(prefix !== '' && seperator !== '')
+        return process.argv.filter((argument: string) => argument.startsWith(prefix) && argument.indexOf(seperator) !== -1)
     return process.argv;
 }
 
