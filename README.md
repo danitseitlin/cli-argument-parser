@@ -1,5 +1,6 @@
 <IMAGE HERE>
-<h1 align='center'>CLI Argument parser<g-emoji class='g-emoji' alias='point_right' fallback-src='https://github.githubassets.com/images/icons/emoji/unicode/1f449.png'>👉</g-emoji> Load your arguments in an easier way!</h1>
+<p align='center'><a href='https://github.com/danitseitlin/npm-package-deployer'><img src='.github/resources/logo.png' /></a></p>
+
 <p align='center'>
   <a href='https://github.com/danitseitlin/cli-argument-parser/blob/master/LICENSE'>
     <img src='https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg' target='_blank' />
