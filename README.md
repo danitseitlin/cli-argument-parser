@@ -29,7 +29,8 @@ const arg2 = cliArguments.arg2;
 Run a cli with `arg1` and `arg2`, ie: `my-command --arg1=2 --arg2=1`
 And the values will be inside the variables we declared above.
 
-## :speak_no_evil: Easily configurate unique CLI's
+## :speak_no_evil: Configurate unique CLI's
+### Using a configuration file
 Create a file in the root of your project called `cli.config.json`
 and paste the following into it:
 ```
@@ -40,4 +41,17 @@ and paste the following into it:
 ```
 The `prefix` is a value which the argument must start with, `--` is the default one. (ex: `--arg=5`) <br>
 The `separator` is a value which seperated between the argument name and argument value. `=` is the default one. (ex: `--arg=5`) <br>
-This gives you the abillity to configurate your cli arguments as you wish.
+This gives you the abillity to configurate your cli arguments as you wish. <br>
+
+### Using the CLI
+If additional files are a mess in your opinion, it is also possible to pass the CLI configuration via CLI arguments.
+`--cli-prefix` to configurate the CLI prefix, ie: `--cli-prefix=--`<br>
+`--cli-separator` to configurate the CLI separator, ie: `--cli-separator==`
+
+### Using the code
+Instead of using the existing `cliArguments`, you are able to also create a custom one, using the following code snippet:
+```
+import { filterArguments } from 'cli-argument-parser';
+const arguments = filterArguments('--', '=');
+```
+The `arguments` variable will hold a JS object with arguments (just like `cliArguments`) filtered by defined prefix and separator .
