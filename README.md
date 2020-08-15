@@ -13,6 +13,9 @@
   <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
     <img src='https://img.shields.io/bitbucket/issues/danitseitlin/cli-argument-parser' target='_blank' />
   </a>
+  <a href='https://dev.to/danitseitlin/manage-your-cli-arguments-easier-4g2b'>
+    <img src='.github/resources/dev-logo.png' target='_blank' />
+  </a>
 </p>
 
 <p align='center'><a href='https://github.com/danitseitlin/cli-argument-parser'><img src='.github/resources/gif.gif' /></a></p>
