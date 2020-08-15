@@ -45,13 +45,13 @@ This gives you the abillity to configurate your cli arguments as you wish. <br>
 
 ### Using the CLI
 If additional files are a mess in your opinion, it is also possible to pass the CLI configuration via CLI arguments.
-`--cli-prefix` to configurate the CLI prefix, ie: `--cli-prefix=--`
+`--cli-prefix` to configurate the CLI prefix, ie: `--cli-prefix=--`<br>
 `--cli-separator` to configurate the CLI separator, ie: `--cli-separator==`
 
 ### Using the code
-Instead of using the existing `cliArguments`, you are able to also create your own custom one.
+Instead of using the existing `cliArguments`, you are able to also create a custom one, using the following code snippet:
 ```
 import { filterArguments } from 'cli-argument-parser';
 const arguments = filterArguments('--', '=');
 ```
-The `arguments` variable will hold a JS object with arguments with the given prefix and separator.
+The `arguments` variable will hold a JS object with arguments (just like `cliArguments`) filtered by defined prefix and separator .
