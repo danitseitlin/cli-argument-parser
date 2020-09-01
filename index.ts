@@ -9,7 +9,7 @@ export const cliArguments = loadArguments();
  * Loading the filtered arguments
  */
 function loadArguments(): {[key: string]: string} {
-    let config: config = file.sync('./cli.config.json') ? require(`${process.env.INIT_CWD}/cli.config.json`): { prefix: '--', separator: '=' }
+    let config: config = file.sync(`${process.env.INIT_CWD}/cli.config.json`) ? require(`${process.env.INIT_CWD}/cli.config.json`): { prefix: '--', separator: '=' }
     config = Object.assign(config, filterArguments('--cli-', '='))
     return filterArguments(config.prefix, config.separator);
 }
