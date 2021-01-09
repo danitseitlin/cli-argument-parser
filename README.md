@@ -1,17 +1,23 @@
 <p align='center'><a href='https://github.com/danitseitlin/cli-argument-parser'><img src='.github/resources/logo.png' /></a></p>
 
 <p align='center'>
+    <a href='https://www.npmjs.com/package/cli-argument-parser'>
+    <img src='https://img.shields.io/npm/v/cli-argument-parser/latest?style=plastic' target='_blank' />
+  </a>
+  <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
+    <img src='https://img.shields.io/npm/dm/cli-argument-parser.svg?color=blue&style=plastic' target='_blank' />
+  </a>
+  <a href='https://github.com/danitseitlin/cli-argument-parser/issues' style='width:25px;height:20px;'>
+    <img src='https://img.shields.io/github/issues/danitseitlin/cli-argument-parser?style=plastic' target='_blank' />
+  </a>
+  <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
+    <img src='https://img.shields.io/bundlephobia/min/cli-argument-parser/latest?style=plastic' target='_blank' />
+  </a>
+  <a href='https://github.com/danitseitlin/cli-argument-parser/commits/master'>
+    <img src='https://img.shields.io/github/last-commit/danitseitlin/cli-argument-parser?style=plastic' />
+  </a>
   <a href='https://github.com/danitseitlin/cli-argument-parser/blob/master/LICENSE'>
-    <img src='https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg' target='_blank' />
-  </a>
-  <a href='https://npmjs.org/package/cli-argument-parser'>
-    <img src='http://img.shields.io/npm/v/cli-argument-parser.svg?style=flat' target='_blank' />
-  </a>
-  <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
-    <img src='https://img.shields.io/npm/dm/cli-argument-parser.svg?color=blue' target='_blank' />
-  </a>
-  <a href='https://npmjs.org/package/cli-argument-parser' style='width:25px;height:20px;'>
-    <img src='https://img.shields.io/bitbucket/issues/danitseitlin/cli-argument-parser' target='_blank' />
+    <img src='https://img.shields.io/badge/license-BSD%203%20Clause-blue.svg?style=plastic' target='_blank' />
   </a>
   <a href='https://dev.to/danitseitlin/manage-your-cli-arguments-easier-4g2b'>
     <img src='.github/resources/dev-logo.png' target='_blank' />
