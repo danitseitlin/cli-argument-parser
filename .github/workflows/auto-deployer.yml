@@ -26,7 +26,7 @@ jobs:
     - name: Running verifications
       run: npm run pre-deploy
     - name: Deploying version
-      uses: danitseitlin/npm-package-deployer@master
+      uses: danitseitlin/package-deployer@master
       with:
         pkg_name: cli-argument-parser
         pkg_registry: registry.npmjs.org
