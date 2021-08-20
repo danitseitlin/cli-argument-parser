@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@types/chai": "4.2.21",
-    "@types/file-exists": "4.0.0",
+    "@types/file-exists": "5.0.0",
     "@types/mocha": "8.0.0",
     "@types/node": "16.4.10",
     "chai": "4.2.0",
