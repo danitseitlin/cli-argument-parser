@@ -1,15 +1,43 @@
 import * as file from 'file-exists';
+import * as fs from 'fs';
+import { parse } from 'dotenv'
 
 /**
  * A global variable containing a parsed list of loaded CLI arguments by preferred prefix (--) and separator (=)
  */
-export const cliArguments = loadArguments();
+export let cliArguments = loadArguments();
+
+/**
+ * Reloading CLI arguments via Config file
+ * @param filePath The file path
+ */
+export function reloadFromConfigFile(filePath: string): void {
+    const file = fs.readFileSync(filePath);
+    const parsedContens = parse(file);
+    console.log(parsedContens)
+    cliArguments = parsedContens;
+}
+
+/**
+ * Reloading the CLI arguments
+ */
+export function reload(): void {
+    cliArguments = loadArguments()
+}
+
+/**
+ * Extending the existing cli arguments with given JS object
+ * @param args A given JS object of arguments
+ */
+export function extend(args: {[key: string]: any}): void {
+    Object.assign(cliArguments, args);
+}
 
 /**
  * Loading the filtered arguments
  */
 function loadArguments(): {[key: string]: string} {
-    let config: config = file.sync(`${process.env.INIT_CWD}/cli.config.json`) ? require(`${process.env.INIT_CWD}/cli.config.json`): { prefix: '--', separator: '=' }
+    let config: Config = file.sync(`${process.env.INIT_CWD}/cli.config.json`) ? require(`${process.env.INIT_CWD}/cli.config.json`): { prefix: '--', separator: '=' }
     config = Object.assign(config, filterArguments('--cli-', '='))
     return filterArguments(config.prefix, config.separator);
 }
@@ -51,7 +79,7 @@ function filterer(prefix: string, separator: string): string[] {
  * @param prefix A starting prefix for the arguments (default: --)
  * @param separator A separator sign for the arguments (default: =)
  */
-type config = {
+type Config = {
     prefix: string,
     separator: string
 }
