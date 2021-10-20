@@ -16,8 +16,8 @@ export function reloadFromConfigFile(filePath: string, syncArgv = true): void {
     const file = fs.readFileSync(filePath);
     const parsedContens = parse(file);
     if(syncArgv) {
-        for(const arg in parsedContens) {
-            process.argv.push(`--${arg}=${parsedContens[arg]}`);
+        for(const argName in parsedContens) {
+            process.argv.push(`--${argName}=${parsedContens[argName]}`);
         }
     }
     cliArguments = parsedContens;
