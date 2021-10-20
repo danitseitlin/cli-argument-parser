@@ -30,9 +30,15 @@ describe('Sanity testing', async function() {
         expect(cliArguments.rKey).to.equal('5050', 'The value of \'rKey\' key');
     })
     it('reloadFromConfigFile function', async() => {
+        const argKey = 'envKey';
+        const argValue = 'env';
         const filePath = process.platform === 'win32' ? `${__dirname}\\configFile`: `${__dirname}/configFile`
         reloadFromConfigFile(filePath)
-        expect(cliArguments.envKey).to.equal('env', 'The value of \'envKey\' key');
+        expect(cliArguments.envKey).to.equal(argValue, 'The value of \'envKey\' key');
+        const filteredArguments = filterArguments('--', '=');
+        expect(filteredArguments.envKey).to.equal(argValue, 'The value of \'envKey\' key');
+        const arg = process.argv.find(arg => arg.indexOf(`--${argKey}=`) !== -1);
+        expect(arg).to.equal(`--${argKey}=${argValue}`, 'The value of \'envKey\' key');
     })
 });
 
