@@ -10,11 +10,23 @@ export let cliArguments = loadArguments();
 /**
  * Reloading CLI arguments via Config file
  * @param filePath The file path
+ * @param syncArgv If to sync the new arguments into the process.argv of NodeJS.
  */
-export function reloadFromConfigFile(filePath: string): void {
+export function reloadFromConfigFile(filePath: string, syncArgv = true): void {
     const file = fs.readFileSync(filePath);
     const parsedContens = parse(file);
-    console.log(parsedContens)
+    if(syncArgv) {
+        for(const [key, value] of Object.entries(parsedContens)) {
+            const argvItemValue = `--${key}=${value}`;
+            const index = process.argv.findIndex(argItem => argItem === argvItemValue);
+            if(index >= 0) {
+                process.argv[index] = argvItemValue;
+            }
+            else {
+                process.argv.push(argvItemValue);
+            }
+        }
+    }
     cliArguments = parsedContens;
 }
 
